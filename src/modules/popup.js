@@ -1,47 +1,16 @@
-import textIcon from '../images/text.svg';
-
+const popup = document.querySelector('.popup');
 let flag = false;
 
-const createPopup = (currentInput) => {
+const createPopup = () => {
   if (flag) return;
-  const popupHtml = `
-  <div class="popup">
-    <div class="popup__header">
-      <h4>Basic Blocks</h4>
-    </div>
-    <ul class="popup__list">
-      <li class="popup__item">
-        <img src="${textIcon}" alt="heading icon" width="30">
-        <div>
-          <h4>Heading 1</h4>
-          <p>Big Section heading</p>
-        </div>
-      </li>
-      <li class="popup__item">
-        <img src="${textIcon}" alt="heading icon" width="30">
-        <div>
-          <h4>Heading 2</h4>
-          <p>Medium Section heading</p>
-        </div>
-      </li>
-      <li class="popup__item">
-      <img src="${textIcon}" alt="heading icon" width="30">
-      <div>
-        <h4>Paragraph</h4>
-        <p>Normal text</p>
-      </div>
-    </li>
-    </ul>
-  </div>`;
-
-  currentInput.insertAdjacentHTML('afterend', popupHtml);
+  popup.classList.remove('hidden');
   flag = true;
 };
 
 const removePopup = () => {
   const popup = document.querySelector('.popup');
   if (popup) {
-    popup.remove();
+    popup.classList.add('hidden');
     flag = false;
   }
 };
