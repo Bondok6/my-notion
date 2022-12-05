@@ -131,6 +131,9 @@ hr {
 }
 
 .popup__item {
+  background: none;
+  border: none;
+  outline: none;
   padding: 0.5rem;
   cursor: pointer;
   display: flex;
@@ -138,8 +141,17 @@ hr {
   gap: 1rem;
 }
 
-.popup__item:hover {
+.popup__item:hover,
+.popup__item:focus,
+.popup__item:active {
   background-color: #f5f5f5;
+  outline: none;
+}
+
+.popup__item div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .popup__item p {
@@ -165,6 +177,10 @@ hr {
 .p {
   font-size: 1rem;
   font-weight: 400;
+}
+
+.hidden {
+  display: none;
 }
 
 /* Media Screen */

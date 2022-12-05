@@ -3,10 +3,10 @@ import createInput from './createInput.js';
 import selectOption from './selectOption.js';
 
 const handleInput = (input = document.getElementById('1')) => {
-  // If the input /, show the popup, else remove it
+  // If the first character is /, show the popup, else remove it
   input.addEventListener('input', () => {
-    if (input.textContent[0] === '/' && input.textContent.length === 1) {
-      createPopup(input);
+    if (input.textContent[0] === '/') {
+      createPopup();
       selectOption(input);
     } else {
       removePopup();
