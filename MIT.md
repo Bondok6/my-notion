@@ -1,4 +1,4 @@
-## Copyright 2022, [Kyrillos]
+## Copyright 2022, Kyrillos Hany
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this [my-notion app] and associated documentation files, to deal in the [my-notion app] without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the [my-notion app], and to permit persons to whom the [my-notion app] is furnished to do so, subject to the following conditions:
 

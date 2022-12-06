@@ -204,6 +204,10 @@ hr {
   font-weight: 400;
 }
 
+.hidden {
+  display: none;
+}
+
 /* Media Screen */
 @media screen and (max-width: 768px) {
   .container {

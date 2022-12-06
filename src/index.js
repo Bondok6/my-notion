@@ -14,7 +14,6 @@ const darkMode = () => {
 };
 
 const lightMode = () => {
-  console.log('light');
   document.querySelector('html').style.filter = 'invert(0) hue-rotate(0deg)';
   document.querySelector('html').style.filter = 'invert(1) hue-rotate(180deg)';
   sunIcon.style.display = 'block';
