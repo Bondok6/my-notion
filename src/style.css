@@ -131,6 +131,9 @@ hr {
 }
 
 .popup__item {
+  background: none;
+  border: none;
+  outline: none;
   padding: 0.5rem;
   cursor: pointer;
   display: flex;
@@ -138,8 +141,17 @@ hr {
   gap: 1rem;
 }
 
-.popup__item:hover {
+.popup__item:hover,
+.popup__item:focus,
+.popup__item:active {
   background-color: #f5f5f5;
+  outline: none;
+}
+
+.popup__item div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .popup__item p {
@@ -149,6 +161,31 @@ hr {
 }
 
 /* _____________________ End POPUP ________________ */
+
+/* ______________________ Start Toggle Mode _____________ */
+
+.toggle-mode {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
+
+.toggle-mode__icon {
+  width: 50px;
+  cursor: pointer;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.toggle-mode__icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.sun {
+  display: none;
+}
+
+/* ______________________ End Toggle Mode _____________ */
 
 /* ____________________ Js Classes ________________ */
 
@@ -171,5 +208,15 @@ hr {
 @media screen and (max-width: 768px) {
   .container {
     width: 95%;
+  }
+}
+
+/* Animation  */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
