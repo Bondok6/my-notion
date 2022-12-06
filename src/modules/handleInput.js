@@ -5,7 +5,7 @@ import selectOption from './selectOption.js';
 const handleInput = (input = document.getElementById('1')) => {
   // If the first character is /, show the popup, else remove it
   input.addEventListener('input', () => {
-    if (input.textContent[0] === '/') {
+    if (input.textContent[0] === '/' && input.textContent.length === 1) {
       createPopup();
       selectOption(input);
     } else {
