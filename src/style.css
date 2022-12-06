@@ -166,8 +166,8 @@ hr {
 
 .toggle-mode {
   position: fixed;
-  top: 1rem;
-  right: 1rem;
+  top: 2rem;
+  right: 3rem;
 }
 
 .toggle-mode__icon {
@@ -213,6 +213,11 @@ hr {
   .container {
     width: 95%;
   }
+
+  .toggle-mode {
+    top: 0;
+    right: 0;
+  }
 }
 
 /* Animation  */
@@ -220,6 +225,7 @@ hr {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
