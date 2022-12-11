@@ -1,4 +1,5 @@
-import textIcon from '../images/text.svg';
+import optionsList from './optionsList.js';
+import createOption from './createOption.js';
 
 let flag = false;
 let active = -1;
@@ -11,27 +12,7 @@ const createPopup = (currentInput) => {
       <h4>Basic Blocks</h4>
     </div>
     <div class="popup__list" role="listitem">
-      <button class="popup__item">
-        <img src="${textIcon}" alt="heading icon" width="30">
-        <div>
-          <h4>Heading 1</h4>
-          <p>Big Section heading</p>
-        </div>
-      </button>
-      <button class="popup__item">
-        <img src="${textIcon}" alt="heading icon" width="30">
-        <div>
-          <h4>Heading 2</h4>
-          <p>Medium Section heading</p>
-        </div>
-      </button>
-      <button class="popup__item">
-        <img src="${textIcon}" alt="heading icon" width="30">
-        <div>
-          <h4>Paragraph</h4>
-          <p>Normal text</p>
-        </div>
-      </button>
+      ${optionsList.map((option) => createOption(option)).join('')}
     </div>
   </div>`;
 

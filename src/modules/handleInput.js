@@ -1,13 +1,17 @@
 import { createPopup, removePopup } from './popup.js';
 import createInput from './createInput.js';
 import selectOption from './selectOption.js';
+import filterOptions from './filterOptions.js';
+import createTag from './createTag.js';
 
 const handleInput = (input = document.getElementById('1')) => {
   // If the first character is /, show the popup, else remove it
   input.addEventListener('input', () => {
-    if (input.textContent[0] === '/' && input.textContent.length === 1) {
+    if (input.textContent[0] === '/') {
       createPopup(input);
       selectOption(input);
+      // filter options
+      filterOptions(input.textContent);
     } else {
       removePopup();
     }
@@ -24,16 +28,8 @@ const handleInput = (input = document.getElementById('1')) => {
       e.preventDefault();
       const text = input.textContent;
 
-      if (text[0] === '/' && text[1] === '1') {
-        input.classList.add('h1');
-        input.textContent = text.slice(2).trim();
-      }
-
-      if (text[0] === '/' && text[1] === '2') {
-        input.classList.add('h2');
-        input.textContent = text.slice(2).trim();
-      }
-
+      if (text[0] === '/' && text[1] === '1') createTag(input, 'h1');
+      if (text[0] === '/' && text[1] === '2') createTag(input, 'h2');
       if (text === '') input.removeAttribute('placeholder');
 
       const newInput = createInput(input, input.id);

@@ -113,6 +113,24 @@ hr {
   height: 15rem;
   background-color: #fff;
   border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: scroll;
+}
+
+.popup::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.popup::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.popup::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.popup::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .popup__header {
@@ -197,6 +215,26 @@ hr {
 .h2 {
   font-size: 1.5rem;
   font-weight: 600;
+}
+
+.h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.h4 {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.h5 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.h6 {
+  font-size: 0.875rem;
+  font-weight: 500;
 }
 
 .p {
